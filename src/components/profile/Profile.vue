@@ -7,19 +7,19 @@
         <h4 >Referral</h4>
       </div>
       <div class="icons">
-        <img src="../../assets/success.png" width="7%" />
-        <img src="../../assets/success.png" width="7%" />
-        <img src="../../assets/success.png" width="7%" />
+        <img src="../../assets/link.png" width="10%" />
+        <img src="../../assets/email.png" width="10%" />
+        <img src="../../assets/bit.png" width="10%" />
       </div>
-      <div class="icons">
+      <div class="texto">
         <h4>Obtenha seu<br>Link</h4>
-        <h4>Convide seus<br></h4>
+        <h4>Convide seus<br>Amigos</h4>
         <h4>Ganhe Bitcoin</h4>
       </div>
       <div class="tab">
         
       </div>
-      <div class="icons">
+      <div class="sub">
         <img src="../../assets/qrcode.png" width="120px"/>
           <h4>Referral ID:<br>
           12345AXB</h4>
@@ -82,8 +82,9 @@ export default {
       .icons {
         display: flex;
         justify-content: space-around;
-        width:  50%;
-        margin-top: 40px;
+        width:  40%;
+        height: 10%;
+        margin-top: 30px;
       }
     }
   h4 {
@@ -93,6 +94,18 @@ export default {
           font-size: 14px;
           
         }
+    .sub {
+        display: flex;
+        justify-content: space-around;
+        width:  50%;
+        margin-top: 40px;
+      }
+      .texto {
+        display: flex;
+        justify-content: space-around;
+        width:  30%;
+        margin-top: 10px;
+      }
   }
 </style>
 
