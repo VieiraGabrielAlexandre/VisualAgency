@@ -1,4 +1,5 @@
 <template>
+
   <div class="body">
     <div class="content">
       <div class="header" v-show="!Pin">
@@ -23,7 +24,7 @@
         <h4 @click="Pin = false">Password</h4>
         <h4 @click="Pin = true">Pin</h4>
       </div>
-
+      <form id="alterarsenha">
       <section v-show="!Pin" class="password">
         <span>Senha</span>
         <input type="text" />
@@ -33,6 +34,7 @@
         <input type="text" />
         <button @click="showModal = true">Alterar Senha</button>
       </section>
+      </form>
 
       <section v-show="Pin" class="Pin">
         <h3>Alteração do Pin</h3>

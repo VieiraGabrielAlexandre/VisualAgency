@@ -11,6 +11,24 @@
         <img src="../../assets/success.png" width="7%" />
         <img src="../../assets/success.png" width="7%" />
       </div>
+      <div class="icons">
+        <h4>Obtenha seu<br>Link</h4>
+        <h4>Convide seus<br></h4>
+        <h4>Ganhe Bitcoin</h4>
+      </div>
+      <div class="tab">
+        
+      </div>
+      <div class="icons">
+        <img src="../../assets/qrcode.png" width="120px"/>
+          <h4>Referral ID:<br>
+          12345AXB</h4>
+          <h4>Valor Comissão:<br>
+          20%</br></h4>
+          <h4>Saldo<br>
+          1.000000</h4>
+        </div>
+        
       <div class="footer"></div>
     </div>
   </div>
@@ -65,10 +83,16 @@ export default {
         display: flex;
         justify-content: space-around;
         width:  50%;
-        margin-top: 30px;
+        margin-top: 40px;
       }
     }
-
+  h4 {
+          width: 200px;
+          color: #39434D;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          
+        }
   }
 </style>
 
