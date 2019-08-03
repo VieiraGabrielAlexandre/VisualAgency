@@ -10,15 +10,15 @@
       <div class="icons">
         <div class="obterLink">
           <img src="../../assets/link.png" width="30%" />
-          <span>Obtenha o seu Link</span>
+          <span><b>Obtenha o seu Link</b></span>
         </div>
         <div class="convideAmigos">
           <img src="../../assets/email.png" width="30%" />
-          <span>Convide seus Amigos</span>
+          <span><b>Convide seus Amigos</b></span>
         </div>
         <div class="ganheBitcoin">
           <img src="../../assets/bit.png" width="30%" />
-          <span>Ganhe Bitcoin</span>
+          <span><b>Ganhe Bitcoin</b></span>
         </div>
       </div>
 
@@ -28,14 +28,15 @@
         </div>
         <div class="referral">
           <div class="topData">
-            <div>Referral Id</div>
-            <div>Valor Comissão</div>
-            <div>Saldo</div>
-            <div>123ABC456DEF</div>
-            <div>20%</div>
-            <div>1.0912129 BTC</div>
+            <div><b>Referral Id</b></div>
+            <div><b>Valor Comissão</b></div>
+            <div><b>Saldo</b></div>
+            <div><font color="white">123ABC456DEF</font></div>
+            <div><font color="white">20%</font></div>
+            <div><font color="white">1.0912129 BTC</font></div>
           </div>
-          <span>Referral Link</span>
+          <br>
+          <span<b>Referral Link</b></span>
           <div>
             <input type="text" placeholder="https://colonybit.com/8a5b4as5b4s-john-doe"/>
             <button><img src="../../assets/document.png" ></button>
@@ -53,7 +54,7 @@
 
       <div class="thirdContainer">
         <div class="invite">
-          <span>Convide um referral</span>
+          <span><b>Convide um referral</b></span>
           <span>Convide alguém para ser o seu referral, use o username e expanda seus contatos</span>
           <div class="input">
             <input type="text" />
@@ -61,17 +62,17 @@
           </div>
         </div>
         <div class="static">
-          <span class="static">Estatisticas</span>
+          <span class="static"><b>Estatisticas</b></span>
           <div CLASS="info">
             <div class="views">
               <span>3</span>
               <img src="../../assets/eye.png" />
-              <span>Views do Referral</span>
+              <span><b>Views do Referral</b></span>
             </div>
             <div class="people">
               <span>2</span>
               <img src="../../assets/clipboard.png" />
-              <span>Pessoas Cadastradas</span>
+              <span><b>Pessoas Cadastradas</b></span>
             </div>
           </div>
         </div>
@@ -86,28 +87,28 @@
             <th>Username</th>
           </tr>
           <tr>
-            <td>11/11/11 as 10:30</td>
+            <td>11/11/11 as 10:34</td>
             <td>0.1561BTC</td>
             <td>JohDoe</td>
           </tr>
           <tr>
-            <td>11/11/11 as 10:30</td>
-            <td>0.1561BTC</td>
+            <td>11/11/11 as 10:33</td>
+            <td>0.1562BTC</td>
+            <td>JohDoe</td>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:32</td>
+            <td>0.1563BTC</td>
+            <td>JohDoe</td>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:31</td>
+            <td>0.1564BTC</td>
             <td>JohDoe</td>
           </tr>
           <tr>
             <td>11/11/11 as 10:30</td>
-            <td>0.1561BTC</td>
-            <td>JohDoe</td>
-          </tr>
-          <tr>
-            <td>11/11/11 as 10:30</td>
-            <td>0.1561BTC</td>
-            <td>JohDoe</td>
-          </tr>
-          <tr>
-            <td>11/11/11 as 10:30</td>
-            <td>0.1561BTC</td>
+            <td>0.1565BTC</td>
             <td>JohDoe</td>
           </tr>
         </table>
