@@ -1,21 +1,19 @@
 <template>
   <div class="menu">
-    <h4><span>Colony Bit</span></h4>
+    <span>Logo</span>
     <ul>
       <li v-for="route in routes">
         <router-link :to="route.path">{{route.titulo}}</router-link>
       </li>
     </ul>
     <section>
-    
-      <h4><span>Notificação</span>
-      <span>Perfil</span></h4>
-      
+      <span>Perfil</span>
+      <span>Notificação</span>
     </section>
   </div>
 </template>
 
-<script>  
+<script>
 export default {
   props: ['routes']
 }
@@ -28,9 +26,9 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 100%;
     box-shadow: 0px 6px 4px black;
-    margin-bottom: -5.11%;
+    margin-bottom: -3.11%;
   }
 
   ul {
@@ -50,18 +48,5 @@ export default {
     font-size: 15px;
     font-weight: 600;
   }
-  h4 {
-          width: 200px;
-          color: #39434D;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 14px;
-          
-        }
-        .icons {
-        display: flex;
-        justify-content: space-around;
-        width:  50%;
-        margin-top: 30px;
-      }
 </style>
 

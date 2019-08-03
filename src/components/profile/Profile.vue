@@ -1,191 +1,472 @@
 <template>
   <div class="body">
-    <div class="content">
+   <div class="content">
       <div class="tab">
-        <h4>Pessoal</h4>
-        <h4>Banco</h4>
-        <h4>Referral</h4>
+        <h4 >Pessoal</h4>
+        <h4 >Banco</h4>
+        <h4 >Referral</h4>
       </div>
+
       <div class="icons">
-        <img src="../../assets/link.png" width="10%" />
-        <img src="../../assets/email.png" width="10%" />
-        <img src="../../assets/bit.png" width="10%" />
-      </div>
-      <div class="texto">
-        <h4>
-          Obtenha seu
-          <br />Link
-        </h4>
-        <h4>
-          Convide seus
-          <br />Amigos
-        </h4>
-        <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGanhe Bitcoin</h4>
-      </div>
-      <div class="tab"></div>
-      <div class="sub">
-        <div class="qrcode">
-          <img src="../../assets/qrcode.png" width="120px" />
+        <div class="obterLink">
+          <img src="../../assets/link.png" width="30%" />
+          <span>Obtenha o seu Link</span>
         </div>
-        <div class="textomeio">
-          <h4>
-            Referral ID:
-            <br />
-            <font color="white">12345AXB</font>
-          </h4>
-          <h4>
-            Valor Comissão:
-            <br />
-            <font color="white">
-              20%
-              <br />
-            </font>
-          </h4>
-          <h4>
-            Saldo
-            <br />
-            <font color="white">1.000000</font>
-          </h4>
+        <div class="convideAmigos">
+          <img src="../../assets/email.png" width="30%" />
+          <span>Convide seus Amigos</span>
         </div>
-        
+        <div class="ganheBitcoin">
+          <img src="../../assets/bit.png" width="30%" />
+          <span>Ganhe Bitcoin</span>
+        </div>
       </div>
-      <div class="meiobaixo">
-        <h4>Referral Link</h4>
+
+      <div class="qrCodeContainer">
+        <div class="qrCode">
+          <img src="../../assets/qrcode.png"/>
+        </div>
+        <div class="referral">
+          <div class="topData">
+            <div>Referral Id</div>
+            <div>Valor Comissão</div>
+            <div>Saldo</div>
+            <div>123ABC456DEF</div>
+            <div>20%</div>
+            <div>1.0912129 BTC</div>
+          </div>
+          <span>Referral Link</span>
+          <div>
+            <input type="text" placeholder="https://colonybit.com/8a5b4as5b4s-john-doe"/>
+            <button><img src="../../assets/document.png" ></button>
+          </div>
+        </div>
       </div>
-        <p><font color="#39434d"></font></p>
-        <input type="text" id="link" value="https:\\colonybit.com\carteira1212121"><!--<img src="../../assets/btncopiar.png" width="4%">-->
-        <h4>Compartilhe:</h4><i class="fas fa-cloud"></i>
-      <div class="tab2"></div>
-      <div class="footer"></div>
+
+      <div class="socialMidia">
+        <span>Compartilhe:</span>
+        <img src="../../assets/facebook.png" />
+        <img src="../../assets/twitter.png" />
+        <img src="../../assets/linkedin.png" />
+        <img src="../../assets/instagram.png" />
+      </div>
+
+      <div class="thirdContainer">
+        <div class="invite">
+          <span>Convide um referral</span>
+          <span>Convide alguém para ser o seu referral, use o username e expanda seus contatos</span>
+          <div class="input">
+            <input type="text" />
+            <button> <img src="../../assets/checked.png" /></button>
+          </div>
+        </div>
+        <div class="static">
+          <span class="static">Estatisticas</span>
+          <div CLASS="info">
+            <div class="views">
+              <span>3</span>
+              <img src="../../assets/eye.png" />
+              <span>Views do Referral</span>
+            </div>
+            <div class="people">
+              <span>2</span>
+              <img src="../../assets/clipboard.png" />
+              <span>Pessoas Cadastradas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="history">
+        <span>Histórico de Ganho</span>
+        <table>
+          <tr class="titulo">
+            <th >Data</th>
+            <th>Valor Ganho</th>
+            <th>Username</th>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:30</td>
+            <td>0.1561BTC</td>
+            <td>JohDoe</td>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:30</td>
+            <td>0.1561BTC</td>
+            <td>JohDoe</td>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:30</td>
+            <td>0.1561BTC</td>
+            <td>JohDoe</td>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:30</td>
+            <td>0.1561BTC</td>
+            <td>JohDoe</td>
+          </tr>
+          <tr>
+            <td>11/11/11 as 10:30</td>
+            <td>0.1561BTC</td>
+            <td>JohDoe</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="back">
+        <router-link to="/">< Voltar para o Dashbord</router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-
- 
-  .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .body {
+    display:flex;
+    justify-content: center;
     align-items: center;
-
-    .tab {
-      display: flex;
-      flex-direction: row;
-      border-bottom: 2px solid #39434d;
-      width: 50%;
-
-      h4 {
-        width: 10%;
-        color: #39434d;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        cursor: pointer;
-      }
-
-      h4:hover {
-        font-size: 14px;
-        color: rgb(48, 66, 85);
-      }
-
-      h4:nth-child(3) {
-        color: #3f7e75;
-      }
-    }
-
-    .icons {
-      display: flex;
-      justify-content: space-around;
-      width: 40%;
-      height: 10%;
-      margin-top: 30px;
-    }
-  }
-  h4 {
-    width: 200px;
-    color: #39434d;
+    width: 100%;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-  .sub {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin-top: 40px;
-  }
-  .texto {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-    margin-top: 10px;
-  }
-  .qrcode {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin-top: -20px;
-    float: left;
-    align-items: left;
-  }
-  .textomeio {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin-top: -40px;
-  }
-  .meiobaixo {
-    display: flex;
-    justify-content: space-around;
-    margin-top: -80px;
-    width: 255px;
-    align-items: left;
-    margin-left: -55px;
-  }
+    color: rgb(111, 122, 133);
 
-  input {
-    border-width: 0.01cm;
-    border-radius: 5px;
-    width: 20%;
-    height: 20px;
-    margin-top: -45px;
-    float: right;
-    background-color: transparent;
-    color: #39434d;
+    .content {
+      width: 100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+
+      .tab {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid  rgb(111, 122, 133);
+        width: 50%;
+
+        h4 {
+          width: 10%;
+          color: #39434D;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 6%;
+        }
+
+        h4:hover {
+          font-size: 14px;
+                    color: rgb(48, 66, 85);
+        }
+
+        h4:nth-child(3) {
+          color: #3F7E75;
+        }
+
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        width:  50%;
+        margin-top: 30px;
+
+        .obterLink, .convideAmigos, .ganheBitcoin {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 10px;
+          width: 50%;
+          height: 100px;
+        }
+
+        span {
+          margin-top: 20px;
+          color: rgb(111, 122, 133);
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          width: 49%;
+        }
+
+      }
+
+      .qrCodeContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        height: 19%;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 2px solid  rgb(111, 122, 133);
+
+        .qrCode {
+          width: 21%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .referral {
+          display: flex;
+          flex-direction: column;
+          width: 76%;
+          justify-content: space-around;
+
+
+          .topData {
+            width: 100%;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            height: 45%;
+
+            div {
+              width: 30%;
+            }
+          }
+
+          span {
+            height: 20%;
+            margin-top: 5%;
+          }
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            height: 30%;
+            align-items: flex-end;
+
+            input {
+              width: 83%;
+              background: transparent;
+              border: 1px solid grey;
+              border-radius: 4px;
+              height: 25px;
+            }
+
+            input::placeholder {
+              color:rgb(111, 122, 133);
+              padding-left: 20px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button {
+              width: 16%;
+              height: 29px;
+              padding: 0;
+              border: 0;
+              background: #24cc9d;
+              border-radius: 2px;
+
+              img {
+                width: 25%;
+                height: 53%;
+              }
+            }
+          }
+        }
+      }
+
+      .socialMidia {
+        width: 50%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        padding-bottom: 20px;
+
+        span {
+          color:rgb(111, 122, 133);
+        }
+
+        img {
+          width:3%;
+          padding: 0 10px;
+        }
+      }
+
+      .thirdContainer {
+        width: 50%;
+        border-top: 2px solid  rgb(111, 122, 133);
+        border-bottom: 2px solid  rgb(111, 122, 133);
+        display: flex;
+
+
+        .invite {
+          display: flex;
+          flex-direction: column;
+          border-right: 2px solid  rgb(111, 122, 133);
+          width:50%;
+
+          span:nth-child(1) {
+            font-size: 17px;
+            margin-top: 30px;
+          }
+
+          span:nth-child(2) {
+            font-size: 14px;
+            color: white;
+            width: 60%;
+            margin: 20px 0;
+          }
+
+
+          div.input {
+            margin-bottom: 30px;
+            display: flex;
+
+          input {
+              width: 75%;
+              background: transparent;
+              border: 1px solid grey;
+              border-radius: 4px;
+              height: 25px;
+
+            }
+
+            input::placeholder {
+              color:rgb(111, 122, 133);
+              padding-left: 20px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button {
+              width: 70px;
+              height: 29px;
+              padding: 0;
+              border: 0;
+              background: #24cc9d;
+              border-radius: 2px;
+              margin-left: 5px;
+
+              img {
+                width: 20%;
+                height: 70%;
+              }
+            }
+          }
+        }
+
+        .static {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+
+          span.static {
+            font-size: 17px;
+            margin: 30px 0;
+            margin-left: 50px;
+          }
+
+          .info {
+            display: flex;
+            width: 100%;
+
+            .views {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              justify-content: center;
+              align-items: center;
+
+              span:nth-child(1) {
+                color: #24cc9d;;
+                font-size: 30px;
+              }
+
+              img {
+                width: 30%;
+                margin: 20px 0;
+              }
+
+              span:nth-child(3) {
+                font-size: 13px;
+                margin: 0;
+                padding: 0;
+                width: 40%;
+                text-align: center;
+                margin-bottom: 20px;
+              }
+
+
+            }
+
+            .people {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              justify-content: center;
+              align-items: center;
+
+              span:nth-child(1) {
+                color: #24cc9d;;
+                font-size: 30px;
+              }
+
+              img {
+                width: 30%;
+                margin: 20px 0;
+              }
+
+              span:nth-child(3) {
+                font-size: 13px;
+                margin: 0;
+                padding: 0;
+                width: 40%;
+                text-align: center;
+                margin-bottom: 20px;
+              }
+
+            }
+          }
+
+        }
+      }
+
+      .history {
+        width: 50%;
+        padding-bottom: 0px;
+        margin-top: 30px;
+        table {
+          width: 100%;
+          text-align: left;
+
+          th {
+            border-bottom: 1px solid grey;
+            height: 20px;
+          }
+
+          td {
+            border-bottom: 1px solid grey;
+            height: 20px;
+          }
+
+
+        }
+      }
+
+      .back {
+        width: 50%;
+        height: 100px;
+        margin-top: 5px;
+
+        a {
+          text-decoration: none;
+          color: grey;
+        }
+      }
+
+    }
+
   }
-  .tab2 {
-      display: flex;
-      flex-direction: row;
-      border-bottom: 2px solid #39434d;
-      width: 50%;
-      margin-top: 40px;
-  }
-  .divdivisoria {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    float:left;
-    padding:0 20px;
-  }
-}
 </style>
-<script>
-  function copiarTexto() {
-    var textoCopiado = document.getElementById("link");
-    textoCopiado.select();
-    document.execCommand("Copy");
-    alert("Texto Copiado: " + textoCopiado.value);
-  }
-</script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+

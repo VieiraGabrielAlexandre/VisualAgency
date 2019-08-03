@@ -1,5 +1,4 @@
 <template>
-
   <div class="body">
     <div class="content">
       <div class="header" v-show="!Pin">
@@ -21,17 +20,18 @@
       </div>
 
       <div class="tab">
-        <h4 @click="Pin = false">Password</h4>
+        <h4 @click="Pin = false">Senha</h4>
         <h4 @click="Pin = true">Pin</h4>
       </div>
+
       <section v-show="!Pin" class="password">
         <span>Senha</span>
-        <input type="text" />
+        <input type="password"  @input="password = $event.target.value"/>
         <span>Nova Senha</span>
-        <input type="text" />
+        <input type="password"  @input="newPassword = $event.target.value" />
         <span>Confirme sua senha</span>
-        <input type="text" />
-        <button @click="showModal = true">Alterar Senha</button>
+        <input type="password"  @input="confirmNewPassword = $event.target.value" />
+        <button @click="showChangePasswordModal">Alterar Senha</button>
       </section>
 
       <section v-show="Pin" class="Pin">
@@ -85,21 +85,22 @@
         <h2>Alteração Pin</h2>
         <div class="input">
           <span>Pin Atual</span>
+          <span>{{ oldPin }}</span>
         </div>
 
         <div class="num">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>X</button>
-          <button>0</button>
-          <button><-</button>
+          <button @click="oldPinChange('1')">1</button>
+          <button @click="oldPinChange('2')">2</button>
+          <button @click="oldPinChange('3')">3</button>
+          <button @click="oldPinChange('4')">4</button>
+          <button @click="oldPinChange('5')">5</button>
+          <button @click="oldPinChange('6')">6</button>
+          <button @click="oldPinChange('7')">7</button>
+          <button @click="oldPinChange('8')">8</button>
+          <button @click="oldPinChange('9')">9</button>
+          <button @click="oldPinChange('X')">X</button>
+          <button @click="oldPinChange('0')">0</button>
+          <button @click="oldPinChange('<')"><-</button>
         </div>
         <div class='actions'>
           <button @click="newPinDialog()">< voltar</button>
@@ -115,21 +116,22 @@
         <h2>Alteração Pin</h2>
         <div class="input">
           <span>Novo Pin</span>
+          <span>{{ pin }}</span>
         </div>
 
         <div class="num">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>X</button>
-          <button>0</button>
-          <button><-</button>
+          <button @click="addNumber('1')">1</button>
+          <button @click="addNumber('2')">2</button>
+          <button @click="addNumber('3')">3</button>
+          <button @click="addNumber('4')">4</button>
+          <button @click="addNumber('5')">5</button>
+          <button @click="addNumber('6')">6</button>
+          <button @click="addNumber('7')">7</button>
+          <button @click="addNumber('8')">8</button>
+          <button @click="addNumber('9')">9</button>
+          <button @click="addNumber('X')">X</button>
+          <button @click="addNumber('0')">0</button>
+          <button @click="addNumber('<')"><-</button>
         </div>
         <div class='actions'>
           <button @click="newPinSuccess()">< voltar</button>
@@ -171,10 +173,27 @@ export default {
       numKeyboardActual: false,
       newPin: false,
       pinChanged: false,
+      pin: "",
+      oldPin: "",
+      password: "",
+      newPassword: "",
+      confirmNewPassword: ""
     }
   },
 
   methods: {
+
+    showChangePasswordModal() {
+      this.showModal = true
+      console.log("password atual: ",this.password)
+      console.log("novo password: ",this.newPassword)
+      console.log("Confirmação do novo password: ",this.confirmNewPassword)
+      alert(`password atual: ${this.password}`)
+      alert(`novo password: ${this.newPassword}`)
+      alert(`Confirmação do novo password: ${this.confirmNewPassword}`)
+
+    },
+
     passwordChangedDialog() {
       this.showModal = false;
       this.passwordChanged = true;
@@ -188,12 +207,30 @@ export default {
     newPinDialog() {
       this.numKeyboardActual = false
       this.newPin = true
+
+      alert(`Pin Atual Digitado: ${this.oldPin}`)
+      console.log("Pin Atual: ", this.oldPin)
     },
 
     newPinSuccess() {
       this.newPin = false
       this.pinChanged = true
+
+      alert(`NOVO PIN DIGITADO: ${this.pin}`)
+      console.log("Novo Pin: ", this.pin)
+    },
+
+    addNumber(v) {
+      if(v == "X") return this.pin = ""
+      this.pin = this.pin + v
+    },
+
+    oldPinChange(v) {
+      if(v == 'X') return this.oldPin = ""
+      this.oldPin = this.oldPin + v
     }
+
+
   },
 }
 </script>
@@ -204,7 +241,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100;
 
 
     .content {
@@ -216,7 +253,7 @@ export default {
       text-align: center;
       border-left: 1px solid black;
       border-right: 1px solid black;
-
+      margin-top: -150px;
       .header {
             display: flex;
             flex-direction: column;
@@ -509,7 +546,17 @@ export default {
         width: 80%;
         margin: 20px 0;
         text-align: left;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
+        display:flex;
+        flex-direction: column;
+
+        span {
+        margin-bottom: 0px;
+        margin-bottom: 10px;
+        color: rgb(211, 211, 211);
+        font-size: 14px;
+        width:62%;
+      }
       }
 
       .actions {
@@ -594,7 +641,17 @@ export default {
         width: 80%;
         margin: 20px 0;
         text-align: left;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+
+        span {
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: rgb(211, 211, 211);
+        font-size: 14px;
+        width:62%;
+      }
       }
 
       .actions {
